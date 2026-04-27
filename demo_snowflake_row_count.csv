@@ -1,0 +1,2 @@
+name,source_query,target_query
+customer_row_count,select count(*) as row_count from SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER,select count(*) as row_count from SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER
