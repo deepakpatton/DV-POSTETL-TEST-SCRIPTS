@@ -4,7 +4,7 @@ Demo validation scripts for DQV Post ETL GitHub-backed runs.
 
 Files included:
 
-- `testcase.xls` - legacy Excel test script copied from the backend project
+- `testcase.xls` - legacy Excel-format demo script updated for Snowflake sample data
 - `demo_snowflake_row_count.csv` - simple Snowflake source/target validation script for demo use
 - `testcase_from_xls.csv` - CSV version generated from `testcase.xls`
 - `testcase_from_xls.json` - JSON version generated from `testcase.xls`
