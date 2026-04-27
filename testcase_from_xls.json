@@ -1,0 +1,12 @@
+[
+  {
+    "name": "sakila_category_revenue_1",
+    "source_query": "SELECT \n    c.name AS category_name,\n    COUNT(r.rental_id) AS total_rentals,\n    SUM(p.amount) AS total_revenue,\n    AVG(f.rental_duration) AS avg_rental_duration\nFROM \n    sakila.category c\nJOIN \n    sakila.film_category fc ON c.category_id = fc.category_id\nJOIN \n    sakila.film f ON fc.film_id = f.film_id\nJOIN \n    sakila.inventory i ON f.film_id = i.film_id\nJOIN \n    sakila.rental r ON i.inventory_id = r.inventory_id\nJOIN \n    sakila.payment p ON r.rental_id = p.rental_id\nGROUP BY \n    c.name\nORDER BY \n    total_revenue DESC;",
+    "target_query": "SELECT \n    c.name AS category_name,\n    COUNT(r.rental_id) AS total_rentals,\n    SUM(p.amount) AS total_revenue,\n    AVG(f.rental_duration) AS avg_rental_duration\nFROM \n    sakila.test.category c\nJOIN \n    sakila.test.film_category fc ON c.category_id = fc.category_id\nJOIN \n    sakila.test.film f ON fc.film_id = f.film_id\nJOIN \n    sakila.test.inventory i ON f.film_id = i.film_id\nJOIN \n    sakila.test.rental r ON i.inventory_id = r.inventory_id\nJOIN \n    sakila.test.payment p ON r.rental_id = p.rental_id\nGROUP BY \n    c.name\nORDER BY \n    total_revenue DESC;"
+  },
+  {
+    "name": "sakila_category_revenue_2",
+    "source_query": "SELECT \n    c.name AS category_name,\n    COUNT(r.rental_id) AS total_rentals,\n    SUM(p.amount) AS total_revenue,\n    AVG(f.rental_duration) AS avg_rental_duration\nFROM \n    sakila.category c\nJOIN \n    sakila.film_category fc ON c.category_id = fc.category_id\nJOIN \n    sakila.film f ON fc.film_id = f.film_id\nJOIN \n    sakila.inventory i ON f.film_id = i.film_id\nJOIN \n    sakila.rental r ON i.inventory_id = r.inventory_id\nJOIN \n    sakila.payment p ON r.rental_id = p.rental_id\nGROUP BY \n    c.name\nORDER BY \n    total_revenue DESC;",
+    "target_query": "SELECT \n    c.name AS category_name,\n    COUNT(r.rental_id) AS total_rentals,\n    SUM(p.amount) AS total_revenue,\n    AVG(f.rental_duration) AS avg_rental_duration\nFROM \n    sakila.test.category c\nJOIN \n    sakila.test.film_category fc ON c.category_id = fc.category_id\nJOIN \n    sakila.test.film f ON fc.film_id = f.film_id\nJOIN \n    sakila.test.inventory i ON f.film_id = i.film_id\nJOIN \n    sakila.test.rental r ON i.inventory_id = r.inventory_id\nJOIN \n    sakila.test.payment p ON r.rental_id = p.rental_id\nGROUP BY \n    c.name\nORDER BY \n    total_revenue DESC;"
+  }
+]

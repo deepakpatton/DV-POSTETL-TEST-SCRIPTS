@@ -6,9 +6,11 @@ Files included:
 
 - `testcase.xls` - legacy Excel test script copied from the backend project
 - `demo_snowflake_row_count.csv` - simple Snowflake source/target validation script for demo use
+- `testcase_from_xls.csv` - CSV version generated from `testcase.xls`
+- `testcase_from_xls.json` - JSON version generated from `testcase.xls`
 
 Suggested GitHub demo settings:
 
 - repo: `deepakpatton/DV-POSTETL-TEST-SCRIPTS`
 - ref: `main`
-- file path: `demo_snowflake_row_count.csv` or `testcase.xls`
+- file path: `demo_snowflake_row_count.csv`, `testcase.xls`, `testcase_from_xls.csv`, or `testcase_from_xls.json`
