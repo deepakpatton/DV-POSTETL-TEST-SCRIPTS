@@ -1,0 +1,4 @@
+name,source_query,target_query
+connector_smoke,select 1 as ok,select 1 as ok
+numeric_smoke,select 4 as total,select 4 as total
+demo_code,select 20260429 as demo_code,select 20260429 as demo_code
