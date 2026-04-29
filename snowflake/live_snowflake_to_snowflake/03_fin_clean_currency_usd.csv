@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+fin_clean_currency_usd,SELECT COUNT(*) AS violation_count FROM DATA_VALIDATOR.PUBLIC.DQV_FIN_CLEAN WHERE currency <> 'USD',SELECT 0 AS violation_count,financial,FIN_Clean,PASS

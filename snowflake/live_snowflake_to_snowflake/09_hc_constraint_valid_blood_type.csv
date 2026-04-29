@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+hc_constraint_valid_blood_type,"SELECT COUNT(*) AS violation_count FROM DATA_VALIDATOR.PUBLIC.DQV_HC_CONSTRAINT_ERRORS WHERE blood_type NOT IN ('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-')",SELECT 0 AS violation_count,healthcare,HC_Constraint_Errors,FAIL

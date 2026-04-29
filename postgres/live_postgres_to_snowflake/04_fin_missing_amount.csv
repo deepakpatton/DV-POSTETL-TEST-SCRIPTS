@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+fin_missing_amount,SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.fin_missing_data WHERE amount IS NULL OR BTRIM(amount) = '',SELECT 0 AS violation_count,financial,FIN_Missing_Data,FAIL

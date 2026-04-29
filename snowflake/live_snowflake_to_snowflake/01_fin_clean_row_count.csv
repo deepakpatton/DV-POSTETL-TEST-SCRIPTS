@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+fin_clean_row_count,SELECT COUNT(*) AS row_count FROM DATA_VALIDATOR.PUBLIC.DQV_FIN_CLEAN,SELECT 100000 AS row_count,financial,FIN_Clean,PASS

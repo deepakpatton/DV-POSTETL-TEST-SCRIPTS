@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+fin_type_amount_numeric,"SELECT COUNT(*) AS violation_count FROM DATA_VALIDATOR.PUBLIC.DQV_FIN_TYPE_ERRORS WHERE TRY_TO_DECIMAL(amount, 18, 2) IS NULL",SELECT 0 AS violation_count,financial,FIN_Type_Errors,FAIL

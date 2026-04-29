@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+fin_clean_missing_amount,SELECT COUNT(*) AS violation_count FROM DATA_VALIDATOR.PUBLIC.DQV_FIN_CLEAN WHERE amount IS NULL OR TRIM(amount) = '',SELECT 0 AS violation_count,financial,FIN_Clean,PASS

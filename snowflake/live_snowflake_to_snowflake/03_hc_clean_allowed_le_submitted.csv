@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+hc_clean_allowed_le_submitted,"SELECT COUNT(*) AS violation_count FROM DATA_VALIDATOR.PUBLIC.DQV_HC_CLEAN WHERE TRY_TO_DECIMAL(allowed_amount, 18, 2) > TRY_TO_DECIMAL(submitted_amount, 18, 2)",SELECT 0 AS violation_count,healthcare,HC_Clean,PASS

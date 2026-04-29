@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+hc_clean_missing_patient_id,SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.hc_clean WHERE patient_id IS NULL OR BTRIM(patient_id) = '',SELECT 0 AS violation_count,healthcare,HC_Clean,PASS

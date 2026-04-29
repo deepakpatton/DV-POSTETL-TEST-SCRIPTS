@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+hc_format_dob_iso,"SELECT COUNT(*) AS violation_count FROM DATA_VALIDATOR.PUBLIC.DQV_HC_FORMAT_ERRORS WHERE TRY_TO_DATE(dob, 'YYYY-MM-DD') IS NULL",SELECT 0 AS violation_count,healthcare,HC_Format_Errors,FAIL

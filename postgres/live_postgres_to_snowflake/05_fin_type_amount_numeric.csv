@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+fin_type_amount_numeric,SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.fin_type_errors WHERE NOT (BTRIM(amount) ~ '^[+-]?[0-9]+(\.[0-9]+)?$'),SELECT 0 AS violation_count,financial,FIN_Type_Errors,FAIL

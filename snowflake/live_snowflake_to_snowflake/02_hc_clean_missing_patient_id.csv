@@ -1,0 +1,2 @@
+name,source_query,target_query,domain,dataset,expected_status
+hc_clean_missing_patient_id,SELECT COUNT(*) AS violation_count FROM DATA_VALIDATOR.PUBLIC.DQV_HC_CLEAN WHERE patient_id IS NULL OR TRIM(patient_id) = '',SELECT 0 AS violation_count,healthcare,HC_Clean,PASS
