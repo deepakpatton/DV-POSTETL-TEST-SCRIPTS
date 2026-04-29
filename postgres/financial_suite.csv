@@ -1,0 +1,7 @@
+name,source_query,target_query,domain,dataset,expected_status
+fin_clean_row_count,"SELECT COUNT(*) AS row_count FROM dqv_pg_demo_20260429.fin_clean","SELECT 100000 AS row_count",financial,FIN_Clean,PASS
+fin_clean_missing_amount,"SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.fin_clean WHERE amount IS NULL OR BTRIM(amount) = ''","SELECT 0 AS violation_count",financial,FIN_Clean,PASS
+fin_clean_currency_usd,"SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.fin_clean WHERE currency <> 'USD'","SELECT 0 AS violation_count",financial,FIN_Clean,PASS
+fin_missing_amount,"SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.fin_missing_data WHERE amount IS NULL OR BTRIM(amount) = ''","SELECT 0 AS violation_count",financial,FIN_Missing_Data,FAIL
+fin_type_amount_numeric,"SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.fin_type_errors WHERE NOT (BTRIM(amount) ~ '^[+-]?[0-9]+(\.[0-9]+)?$')","SELECT 0 AS violation_count",financial,FIN_Type_Errors,FAIL
+fin_range_currency_usd,"SELECT COUNT(*) AS violation_count FROM dqv_pg_demo_20260429.fin_range_errors WHERE currency <> 'USD'","SELECT 0 AS violation_count",financial,FIN_Range_Errors,FAIL
